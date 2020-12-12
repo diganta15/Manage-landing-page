@@ -6,11 +6,21 @@ body{
     justify-content: space-between;
     margin: 5rem;
 }
+.menue{
+    display: none;
+}
 .pages{
     font-weight: 600;
     padding: 20px;
 }
 .pages > .ul> li{
+    cursor: pointer;
+    list-style: none;
+    display: inline;
+    padding: 6px;
+}
+.pages > .ul> li:hover{
+    border-bottom:3px solid pink;
     list-style: none;
     display: inline;
     padding: 6px;
@@ -167,4 +177,76 @@ body{
     transition: 0.8s;
     outline: none;
     cursor: pointer;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+}
+
+.flex>div> li{
+    list-style: none;
+    font-size: 16px;
+    margin: 5px;
+    
+}
+footer{
+    background-color: hsl(233, 12%, 13%);
+    color: white;
+}
+.icon {
+    filter: invert(100%) sepia(13%) saturate(7500%) hue-rotate(200deg) brightness(114%) contrast(114%);
+    margin-bottom: 4rem;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+}
+.f4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.newsletter{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    border: none;
+    border-radius: 30px;
+    width: 11rem;
+    outline: none;
+}
+.f4> p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+/* Mobile Style */
+@media only screen and (max-width: 767px)
+{
+    .navbar{
+        display: flex;
+    }
+    .pages{
+        display: none;
+    }
+    .top-button{
+        display: none;
+    }
+    .menue{
+        display: block;
+        /* flex-direction: row; */
+    }
+    .hamburger{
+        border: 1px solid white;
+        /* display: flex; */
+        background-color: hsl(228, 39%, 23%);
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        text-decoration: none;
+        font-size: 4px;
+    }
 }
