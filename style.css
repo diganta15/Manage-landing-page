@@ -9,6 +9,7 @@ body{
 .menue{
     display: none;
 }
+.close{display: none;}
 .pages{
     font-weight: 600;
     padding: 20px;
@@ -120,13 +121,16 @@ body{
     color:  hsl(228, 39%, 23%) ;
 
 }
-.slider{
+.non-slider{
     display: flex;
     justify-content: space-between;
 }
-.p{
+.j{
     margin: 15px;
     text-align: center;
+}
+.slider{
+    display: none;
 }
 .pic> img{
     width: 20%;
@@ -221,6 +225,9 @@ footer{
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
+.mobile{
+    display: none;
+}
 
 /* Mobile Style */
 @media only screen and (max-width: 767px)
@@ -234,13 +241,64 @@ footer{
     .top-button{
         display: none;
     }
+    .pages-mob{
+       
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        height: 70%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow-x: hidden; 
+        overflow-y: hidden;
+        transition: 0.5s;
+        width: 100%;
+        
+        align-self: center;
+        
+  
+    }
+    .pages-mob> img{
+        display: block;
+        margin-top: 4rem;
+        margin-left: 30rem;
+        float: right;
+        object-fit: contain;
+        margin-bottom: 0px;
+        cursor: pointer;
+    }
+    .pages-mob .ul{
+        background-color: white;
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0px rgba(0, 0, 0, 1); */
+
+        margin-left: 0rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        top: 10%; 
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        
+    }
+    .pages-mob .ul>li{
+        list-style: none;
+        padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color:  hsl(233, 12%, 13%);
+  display: block;
+  font-weight: 600;
+        
+    }
     .menue{
         display: block;
-        /* flex-direction: row; */
+        
     }
     .hamburger{
         border: 1px solid white;
-        /* display: flex; */
+        
         background-color: hsl(228, 39%, 23%);
         padding-left: 16px;
         padding-right: 16px;
@@ -248,5 +306,221 @@ footer{
         padding-bottom: 0px;
         text-decoration: none;
         font-size: 4px;
+        cursor: pointer;
     }
+
+    .showcase-top{
+        display: grid;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .showcase-top .showcase-right{
+        grid-row-start: 1;
+    }
+    .showcase-top .showcase-right> img{
+        object-fit: contain;
+        width: 100%;
+    }
+    .text-small{
+        font-size: 26px;
+        text-align: center;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .showcase-left .bg-large{
+        text-align: center;
+    }
+    .showcase-left .bg-large> button{
+        font-size: 1.2rem;
+    }
+    .showcase-mid{
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .text-big{
+        text-align: center;
+    }
+    .showcase-mid .showcase-right .flex{
+        display: grid;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .num{
+        grid-column: 1/1;
+        width: 15%;
+    }
+    .num> p{
+        width: auto;
+    }
+    .q{
+        grid-row: 1;
+    }
+    /* .a{
+        float: left;
+    } */
+    .slider{
+        max-width: 1000px;
+  position: relative;
+  margin: auto;
+    }
+    .slider{
+        display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    }
+    p{
+        margin: 15px;
+        text-align: center;
+    }
+    .pic{
+        display: flex;
+        justify-content: center;
+    }
+    .pic> img{
+        align-self: center;
+        justify-self:center ;
+        width: 20%;
+        height: auto;
+    }
+    .name{
+        text-align: center;
+        color:hsl(228, 39%, 23%) ;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .des{
+        color:  hsl(227, 12%, 61%) ;
+        font-weight: 400;
+    }
+    .j{
+        display: none;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: white;
+        border: 1px solid hsl(12, 88%, 59%);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      .active, .dot:hover {
+        background-color: hsl(12, 88%, 59%);
+      }
+      
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+
+      .showcase-low{
+          flex-direction: column;
+          margin: 0px;
+          padding-top: 10rem;
+          padding-bottom: 10rem;
+          padding-left: 12px;
+          padding-right: 12px;
+          text-align: center;
+      }
+      .showcase-low>div{
+          margin-top: 20px;
+          margin-bottom: 20px;
+          padding: 0px;
+      }
+    .text-banner{
+          padding: 0px;
+          margin-right: 0px;
+          text-align: center;
+      }
+      .desktop{
+          display: none;
+      }
+      .mobile{
+          display: flex;
+          flex-direction: column;
+      }
+      .mobile .f1{
+          display: inline;
+          margin-top: 4rem;
+      }
+      .newsletter{
+          display: flex;
+          justify-content: space-around;
+          
+          font-size: 20px;
+      }
+      .newsletter> input{
+          width: 50%;
+          font-size: 1.2rem;
+      }
+      .grid-low{
+          display: flex;
+          justify-content: space-between;
+          margin-right: 4rem;
+          margin-left: 4rem;
+          margin-top: 4rem;
+      }
+      .grid-low>div> li{
+          list-style: none;
+          font-size: 1.1rem;
+          padding: 5px;
+      }
+      .logos{
+          margin: 2rem;
+
+          display: flex;
+          justify-content: space-evenly;
+          
+      }
+      .logos> img{
+          width: 3rem;
+      }
+      .icons{
+          align-self: center;
+          
+      }
+      .icons> img{
+          width: 12rem;
+      }
 }

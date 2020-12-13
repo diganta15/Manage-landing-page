@@ -20,7 +20,8 @@
 
   <nav class="navbar">
     <div class="svg"><img src="images/logo.svg" alt=""></div>
-   <div class="pages">
+   <div id="change" class="pages">
+     <img src="images/icon-close.svg" id="close" class="close" alt="">
     <div class="ul">
       <li>Pricing</li>
       <li>Product</li>
@@ -33,7 +34,7 @@
    <div class="bg-large top-button">
     <button>Get Started</button>
    </div>
-   <div class="menue">
+   <div id="menue" class="menue">
     <li class="hamburger"></li>
     <li class="hamburger"></li>
     <li class="hamburger"></li>
@@ -127,8 +128,8 @@
     What they’ve said
   </div>
 
-  <div class="slider">
-    <div class="p">
+  <div class="non-slider">
+    <div class="j">
       <div class="pic"><img src="images/avatar-anisha.png" alt=""></div>
       <div class="name">Anisha Li</div>
       <div class="des">
@@ -136,7 +137,7 @@
         visibility on larger milestones at all times keeps everyone motivated.”
       </div>
     </div>
-    <div class="p">
+    <div class="j">
       <div class="pic"><img src="images/avatar-ali.png" alt=""></div>
       <div class="name">Ali Bravo</div>
       <div class="des">  
@@ -144,7 +145,7 @@
         Manage. There is no more cross-channel confusion and everyone is much 
         more focused.”</div>
     </div>
-    <div class="p">
+    <div class="j">
       <div class="pic"><img src="images/avatar-richard.png" alt=""></div>
       <div class="name">Richard Watts</div>
       <div class="des">
@@ -152,13 +153,59 @@
         and focused. I can’t stop recommending them to everyone I talk to!”
       </div>
     </div>
-    <div class="p">
+    <div class="j">
       <div class="pic"><img src="images/avatar-shanai.png" alt=""></div>
       <div class="name">Shanai Gough</div>
       <div class="des">
         “Their software allows us to track, manage and collaborate on our projects 
         from anywhere. It keeps the whole team in-sync without being intrusive.”</div>
     </div>
+  </div>
+
+
+
+
+
+  <div class="slider">
+    <div class="p fade">
+      <div class="pic"><img src="images/avatar-anisha.png" alt=""></div>
+      <div class="name">Anisha Li</div>
+      <div class="des">
+        “Manage has supercharged our team’s workflow. The ability to maintain 
+        visibility on larger milestones at all times keeps everyone motivated.”
+      </div>
+    </div>
+    <div class="p fade">
+      <div class="pic"><img src="images/avatar-ali.png" alt=""></div>
+      <div class="name">Ali Bravo</div>
+      <div class="des">  
+        “We have been able to cancel so many other subscriptions since using 
+        Manage. There is no more cross-channel confusion and everyone is much 
+        more focused.”</div>
+    </div>
+    <div class="p fade">
+      <div class="pic"><img src="images/avatar-richard.png" alt=""></div>
+      <div class="name">Richard Watts</div>
+      <div class="des">
+        “Manage allows us to provide structure and process. It keeps us organized 
+        and focused. I can’t stop recommending them to everyone I talk to!”
+      </div>
+    </div>
+    <div class="p fade">
+      <div class="pic"><img src="images/avatar-shanai.png" alt=""></div>
+      <div class="name">Shanai Gough</div>
+      <div class="des">
+        “Their software allows us to track, manage and collaborate on our projects 
+        from anywhere. It keeps the whole team in-sync without being intrusive.”</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
   </div>
   <div class="bg-bottom bg-large">
     <button>Get Started</button>
@@ -205,7 +252,45 @@
       <p>Copyright 2020. All Rights Reserved</p>
     </div>
   </div>
+
   
+</div>
+
+<div class="mobile">
+  <div class="f1">
+    <div class="newsletter">
+      <input type="text" class="box" placeholder="Updates in your inbox…">
+    <div class="bg-large"><button>Go</button></div>
+    </div>
+  </div>
+  <div class="f2 grid-low">
+    <div class="li-1">
+      <li>Home</li>
+    <li>Pricing</li>
+    <li>Products</li>
+    <li>About Us</li>
+    </div>
+    <div class="li-2">
+      <li>Careers</li>
+      <li>Community</li>
+      <li>Privacy Policy</li>
+    </div>
+  </div>
+  <div class="f3">
+    <div class="logos">
+      <img src="images/icon-facebook.svg" alt="" class="logo">
+      <img src="images/icon-youtube.svg" alt="" class="logo">
+      <img src="images/icon-twitter.svg" alt="" class="logo">
+      <img src="images/icon-pinterest.svg" alt="" class="logo">
+      <img src="images/icon-instagram.svg" alt="" class="logo">
+    </div>
+  </div>
+  <div class="icons">
+    <img src="images/logo.svg" alt="" class="icon">
+  </div>
+  <div class="copyright">
+    <p>Copyright 2020. All Rights Reserved</p>
+  </div>
 </div>
 </footer>
   
@@ -216,4 +301,5 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 </body>
+<script src="script.js"></script>
 </html>
