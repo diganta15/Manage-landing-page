@@ -170,6 +170,7 @@ body{
 }
 .text-left{
     text-align:left;
+}
 .bg-banner> button{
     font-weight: 600;
     background-color: white;
