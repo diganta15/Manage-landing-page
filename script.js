@@ -28,15 +28,14 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-//Hamburger Menue
+const menu = document.getElementById('menu');
 
-  var x = document.getElementById("menue");
-  x.onclick = function(){
-    document.getElementById("change").className = "pages-mob"
-    document.getElementById("menue").style.display="none"
-  }
-  var y =document.getElementById("close");
-  y.onclick = function(){
-    document.getElementById("change").className="pages";
-    document.getElementById("menue").style.display="block"
-  }
+const close = document.getElementById("close");
+
+menu.addEventListener('click',()=>{
+  document.getElementById('list').style.display = "flex"
+});
+
+close.addEventListener("click", () => {
+  document.getElementById("list").style.display = "none";
+});

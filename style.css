@@ -9,6 +9,9 @@ body{
 .menue{
     display: none;
 }
+.mobile-menu{
+    display: none;
+}
 .close{display: none;}
 .pages{
     font-weight: 600;
@@ -233,8 +236,51 @@ footer{
 @media only screen and (max-width: 767px)
 {
     .navbar{
+        margin: 1rem 2rem 5rem 2rem;
         display: flex;
+        justify-content: space-between !important;
+       ;
+       position: relative;
     }
+     .menue{
+        display: block;
+        padding-top: 10px;
+       padding-left: 1rem;
+       top: 0;
+    }
+    
+    .fa-bars{
+        padding-top: 0px;
+        margin-top: 0px;
+        font-size: 1rem;
+    }
+    .svg{
+        padding-top: 10px;
+        align-self: auto !important;
+    }
+
+    .mobile-menu{
+        display: none;
+        position: absolute;
+        margin-top: 2rem;
+       
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .mobile-menu> img{
+        width: 30px;
+        align-self: center;
+    }
+    .ul-mob{
+        text-align: center;
+        padding-inline-start: 0px;
+    }
+    .ul-mob li{
+        list-style: none;
+        padding-left: 0px !important;
+    }
+    
     .pages{
         display: none;
     }
@@ -259,8 +305,8 @@ footer{
         
   
     }
-    .pages-mob> img{
-        display: block;
+    .pages-mob .close{
+        display: flex;
         margin-top: 4rem;
         margin-left: 30rem;
         float: right;
@@ -292,10 +338,7 @@ footer{
   font-weight: 600;
         
     }
-    .menue{
-        display: block;
-        
-    }
+   
     .hamburger{
         border: 1px solid white;
         
@@ -331,7 +374,7 @@ footer{
         text-align: center;
     }
     .showcase-left .bg-large> button{
-        font-size: 1.2rem;
+        font-size: 10px;
     }
     .showcase-mid{
         flex-direction: column;
@@ -350,7 +393,7 @@ footer{
     }
     .num{
         grid-column: 1/1;
-        width: 15%;
+        
     }
     .num> p{
         width: auto;
@@ -487,18 +530,18 @@ footer{
       .newsletter{
           display: flex;
           justify-content: space-around;
+          font-size: 12px;
           
-          font-size: 20px;
       }
+      
       .newsletter> input{
-          width: 50%;
-          font-size: 1.2rem;
+          width: 40%;
+          font-size: 10px;
       }
       .grid-low{
           display: flex;
           justify-content: space-between;
-          margin-right: 4rem;
-          margin-left: 4rem;
+          
           margin-top: 4rem;
       }
       .grid-low>div> li{
