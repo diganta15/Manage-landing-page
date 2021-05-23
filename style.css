@@ -171,6 +171,9 @@ body{
     color: white;
     margin-right: 4rem;
 }
+.text-left{
+    text-align:left;
+}
 .bg-banner> button{
     font-weight: 600;
     background-color: white;
